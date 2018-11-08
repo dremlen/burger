@@ -1,0 +1,13 @@
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white:#ffffff;
+
+@import "settings/font.scss";
+@import "settings/layout.scss";
+@import "blocks/welcome.scss";
+@import "blocks/webest.scss";
+@import "blocks/team.scss";
+@import "blocks/comments.scss";
+@import "blocks/forms.scss";

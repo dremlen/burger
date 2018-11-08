@@ -1,0 +1,32 @@
+.forms {
+  background: url(../img/background/form-bg.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.form__title {
+  font-family: "Gagalinregular";
+  color: $yellow;
+}
+
+.form__inform {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form__list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 50px;
+}
+
+.form__input {
+  height: 35px;
+}

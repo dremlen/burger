@@ -1,0 +1,116 @@
+.welcome{
+    background-image: url(../img/background/Rectangle\ 11.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.header{
+  display: flex;
+  width: 100%;
+ justify-content: space-between;
+  padding-top: 10px;
+  align-items: center;
+}
+.header__nav{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 11px;
+  margin-top: -10px;
+}
+.nav__list{
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  &:last-child {
+    .nav__link:after {
+      display: none;
+    }
+  }
+}
+.nav__link{
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-family: ubuntu;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: medium;
+  text-transform: uppercase;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 16px;
+    align-items: center;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.header__btn {
+  background: $red;
+  color: #fff;
+  font-family: 'ubuntu';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: medium;
+  text-transform: uppercase;
+  margin-left: 15px;
+  &:hover{
+    background: #c1401e;
+  }
+}
+
+.content{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.content__burger{
+  width: 50%;
+  background-image: url(../img/elements/drops.png);
+  background-repeat: no-repeat;
+  background-position: 25px 55px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content__desc{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.content__title{
+  font-family: 'gagalinregular';
+  color: $yellow;
+  margin-top: 40px;
+  padding: 20px 7px;
+  text-align: start;
+}
+.content__text{
+  font-size: 65px;
+  font-family: 'lifehack';
+  color: #fff;
+  text-transform: lowercase;
+  line-height: 1.01em;
+  margin-left: 3px;
+}
+.content__link{
+  margin-bottom: 39px;
+  display: flex;
+  justify-content: center;
+}
+.content__arrow{
+  width: 30px;
+  &:hover{
+    width: 35px;
+  }
+}
+

@@ -1,0 +1,64 @@
+html,
+body{
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  color: $black;
+  position: relative;
+}
+.conteiner {
+  margin: 0 auto;
+  position: relative;
+  width: 960px;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section__wrapper{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+.btn{
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.title{
+  font-size: 71.713px;
+  text-align: center;
+  line-height: 0.889;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

@@ -1,0 +1,59 @@
+.team{
+  height: 100vh;
+  background: url(../img/background/SBS_1255-X2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.team__desc{
+   position: absolute;
+   left: 550px;
+   width: 50%;
+}
+.team__defin{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__title{
+    font-family: 'gagalinregular';
+    color: $yellow;
+    padding-top: 1.5em;
+    margin-bottom: 45px;
+}
+.accordeon__title{
+  font-size: 14px;
+  color: $white;
+  font-weight: 'gagalinregular';
+}
+
+.accordeon__desc{
+   display: none;
+ }
+.accordeon__desc--activ{
+    display:flex;
+}
+.accordeon__photo{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.accordeon__content{
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+}
+.accordeon__prof{
+  font-size: 14px;
+  color: $white;
+  font-weight: 'ubuntubold';
+}
+.accordeon__text p{
+    font-size: 14px;
+    color: $white;
+    font-weight: 'ubuntulight';
+
+}
+
