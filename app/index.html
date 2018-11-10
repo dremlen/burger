@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
   <title>Burgershop</title>
   <link rel="stylesheet" href="./css/settings/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -172,6 +173,45 @@
       </div>
     </section>
 
+    <!-- menu -->
+
+    <section class="section__wrapper menu">
+      <h2 class="title menu__title">Меню</h2>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <h3 class="menu__name menu__name1">Для мясоедов</h3>
+          <p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+          пространственно выбирает метр.
+          Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову.
+          </p>
+        </li>
+        <li class="menu__item">
+          <h3 class="menu__name menu__name2">Вегетарианское</h3>
+          <p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+          пространственно выбирает метр.
+          Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову.</p>
+        </li>
+        <li class="menu__item">
+          <h3 class="menu__name menu__name3">Диетическое</h3>
+          <p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+          пространственно выбирает метр.
+          Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+          сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+          слову.</p>
+        </li>
+      </ul>
+    </section>
+
 
 <!-- Комментарии -->
 
@@ -272,56 +312,119 @@
 
 <!-- Форма заказа-->
 
-    <section class="section__wrapper forms">
+    <section class="section__wrapper order">
       <div class="conteiner">
-        <h2 class="form__title title">Закажите доставку</h2>
+        <h2 class="order__title title">Закажите доставку</h2>
         <form action="#" class="form" method="POST">
-          <div class="form__inform">
-            <ul class="form__list">
-              <li class="form__item">
-                <label for="name" class="name__label">Имя</label><br>
-                <input type="text" class="form__input name__input" name="name" value="">
-              </li>
-              <li class="form__item">
-                <label for="tel" class="tel__label">Телефон</label><br>
-                <input type="tel" class="form__input tel__input" name="tel" placeholder="89212264923" value="">
-              </li>
-            </ul>
-            <div class="form__street">
-              <label for="street" class="street__label">Улица</label><br>
-              <input type="text" class="street_input" name="street" value="">
-            </div>
-            <div class="form__adress">
-              <label for="house" class="house__label">Дом</label><br>
-              <input type="text" class="house__input" name="house" value="">
-              <label for="housing" class="housing__label">Корпус</label><br>
-              <input type="text" class="housing__input" name="housing" value="">
-              <label for="room" class="room__label">Квартира</label><br>
-              <input type="text" class="room__input" name="room" value="">
-              <label for="floor" class="floor__label">Этаж</label><br>
-              <input type="text" class="floor__input" name="floor" value="">
-            </div>
-          </div>
-          <div class="form__payment">
-            <div class="form__textarea">
-              <div class="textarea__title">Комментарий</div>
-              <textarea name="comment" class="textarea__comment"></textarea>
-            </div>
-            <div class="form__radio">
-              <div class="radio__repay">
-                <label class="repay__label">
-                  <input type="radio" name="radio" class="repay__radio_field" value="repay">
-                  <div class="reayp__radio_border">
-                    <div class="repay__radio_circle">
-                      <span class="repay__radio_span">Потребуется сдача</span>
-                    </div>
-                  </div>
+          <div class="form__content">
+            <div class="form__inform">
+              <div class="form__row">
+                <label for="name" class="form__block">
+                  <div class="form__block--title">Имя</div>
+                  <input type="text" class="form__input" name="name" value="">
                 </label>
+                <label for="tel" class="form__block">
+                  <div class="form__block--title">Телефон</div>
+                  <input type="tel" class="form__input" name="tel" placeholder="89212264923" value="">
+                </label>
+              </div>
+              <div class="form__row">
+                <label for="street" class="form__block">
+                  <div class="form__block--title">Улица</div>
+                  <input type="text" class="form__input" name="street" value="">
+                </label>
+              </div>
+              <div class="form__row">
+                <label for="house" class="form__block">
+                  <div class="form__block--title">Дом</div>
+                  <input type="text" class="form__input" name="house" value="">
+                </label>
+                <label for="housing" class="form__block">
+                  <div class="form__block--title">Корпус</div>
+                  <input type="text" class="form__input" name="housing" value="">
+                </label>
+                <label for="room" class="form__block">
+                  <div class="form__block--title">Квартира</div>
+                  <input type="text" class="form__input" name="room" value="">
+                </label>
+                <label for="floor" class="form__block">
+                  <div class="form__block--title">Этаж</div>
+                  <input type="text" class="form__input" name="floor" value="">
+                </label>
+              </div>
+            </div>
+            <div class="form__payment">
+              <div class="form__block">
+                <div class="form__block--title">Комментарий</div>
+                <textarea name="comment" class="form__comment"></textarea>
+              </div>
+              <div class="form__radio">
+                <input type="radio" class="radio__input" id="return" name="pay">
+                <label for="return" class="radio__label">Потребуется сдача</label>
+                <input type="radio" class="radio__input" id="pay" name="pay" checked="checked">
+                <label for="pay" class="radio__label">Оплатить по карте</label>
+              </div>
+              <div class="form__chexbox">
+                <input type="checkbox" class="form__checked--item" id="call" checked="checked">
+                <label for="call" class="form__checked">Не перезванивать</label>
+              </div>
+              <div class="form__button">
+                <button class="form__btn btn" type="submit">Заказать</button>
+                <button class="form__btn--reset" type="reset">Очистить</button>
               </div>
             </div>
           </div>
         </form>
       </div>
+    </section>
+
+    <!-- карта -->
+    <section class="section__wrapper map">
+      <footer class="footer">
+        <div class="conteiner footer__conteiner">
+          <div class="footer__contact">
+            <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+            <div class="footer__phone">
+              <svg class="icon__phone">
+                <use xlink:href="./sprite.svg#phone"></use>
+              </svg>
+              <a href="tel:88123771377" class="footer__number">+7 (812) 377-13-77</a>
+            </div>
+          </div>
+          <div class="footer__icon">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <svg class="icon__social">
+                    <use xlink:href="./sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <svg class="icon__social">
+                    <use xlink:href="./sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <svg class="icon__social">
+                    <use xlink:href="./sprite.svg#insta"></use>>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <svg class="icon__social">
+                    <use xlink:href="./sprite.svg#tw"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </section>
   </div>
 </body>

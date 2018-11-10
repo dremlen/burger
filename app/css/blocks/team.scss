@@ -19,18 +19,19 @@
 }
 .team__title{
     font-family: 'gagalinregular';
-    color: $yellow;
+    color: #f9b43b;
     padding-top: 1.5em;
     margin-bottom: 45px;
 }
 .accordeon__title{
   font-size: 14px;
-  color: $white;
-  font-weight: 'gagalinregular';
+  color: #ffffff;
+  font-family: 'gagalinregular';
 }
 
 .accordeon__desc{
-   display: none;
+  height: 0;
+  overflow: hidden;
  }
 .accordeon__desc--activ{
     display:flex;
@@ -47,13 +48,13 @@
 }
 .accordeon__prof{
   font-size: 14px;
-  color: $white;
-  font-weight: 'ubuntubold';
+  color: #ffffff;
+  font-family: 'ubuntubold';
 }
 .accordeon__text p{
     font-size: 14px;
-    color: $white;
-    font-weight: 'ubuntulight';
+    color: #ffffff;
+    font-family: 'ubuntulight';
 
 }
 

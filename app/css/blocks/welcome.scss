@@ -33,7 +33,7 @@
 .nav__link{
   display: flex;
   align-items: center;
-  color: $white;
+  color: #fff;
   font-family: ubuntu;
   font-size: 13px;
   font-style: normal;
@@ -55,7 +55,7 @@
   }
 }
 .header__btn {
-  background: $red;
+  background: #e35028;
   color: #fff;
   font-family: 'ubuntu';
   font-size: 13px;
@@ -89,7 +89,7 @@
 }
 .content__title{
   font-family: 'gagalinregular';
-  color: $yellow;
+  color: #f9b43b;
   margin-top: 40px;
   padding: 20px 7px;
   text-align: start;
