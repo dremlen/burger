@@ -1,3 +1,14 @@
+/*
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content:
+  }
 
+}
 
-/*# sourceMappingURL=mixin.css.map */
+@mixin phones {
+  @media (max-width: $phones) {
+    @content:
+  }
+}
+*/

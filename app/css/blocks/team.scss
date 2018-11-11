@@ -18,8 +18,8 @@
     font-family: 'gagalinregular';
     color: #f9b43b;
     position: absolute;
-    top: 107px;
-    right: 147px;
+    top: rem(107px);
+    right: rem(147px);
     
 }
  .accordeon__list{
@@ -29,32 +29,32 @@
   top: 0;
   bottom: o;
   right: 0;
-  margin-top: 205px;
+  margin-top: rem(205px);
   width: 100%;
 
  }
  .accordeon__item{
-   height: 30px;
-   padding: 10px 0 10px 5px;
-   margin-bottom: 20px;
+   height: rem(30px);
+   padding: rem(10px) 0 rem(10px) rem(5px);
+   margin-bottom: rem(20px);
    overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 96px;
+  margin-left: rem(96px);
   transition: all 2s;
 
     &:active{
-      height: 155px;
+      height: rem(155px);
     }
  }
  .accordeon__item:active .accordeon__triangle{
     display: block;
-    border: 5px solid transparent;
-    border-bottom: 5px solid #f9b43b;
+    border: rem(5px) solid transparent;
+    border-bottom: rem(5px) solid #f9b43b;
     width: 0;
     height: 0;
-    margin-top: 3px;
+    margin-top: rem(3px);
  }
  .accordeon__item:active .accordeon__title{
     color: #f9b43b;
@@ -66,50 +66,50 @@
  }
  .accordeon__triangle{
    display: block;
-   border: 5px solid transparent;
-   border-top: 5px solid #f9b43b;
+   border: rem(5px) solid transparent;
+   border-top: rem(5px) solid #f9b43b;
    width: 0;
    height: 0;
-   margin-top: 9px;
-   margin-left: 9px;
+   margin-top: rem(9px);
+   margin-left: rem(9px);
 
  }
  .accordeon__title {
-   font-size: 14px;
+   font-size: rem(14px);
    color: #ffffff;
    font-family: 'gagalinregular';
-   margin-bottom: 15px;
-   margin-left: 9px;
+   margin-bottom: rem(15px);
+   margin-left: rem(9px);
 
  }
 
  .accordeon__desc{
    display: flex;
-   margin-left: 25px;
+   margin-left: rem(25px);
  }
 .accordeon__photo{
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   border-radius: 50%;
-  margin-right: 4px;
+  margin-right: rem(4px);
   overflow: hidden;
 }
 .accordeon__content{
   display: flex;
   flex-direction: column;
-  width: 230px;
-  padding-left: 13px;
+  width: rem(230px);
+  padding-left: rem(13px);
 }
 .accordeon__prof{
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   font-family: 'ubuntubold';
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 .accordeon__text p{
-    font-size: 14px;
+    font-size: rem(14px);
     color: #ffffff;
     font-family: 'ubuntulight';
-    line-height: 24px;
+    line-height: rem(24px);
 }
 

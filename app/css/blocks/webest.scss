@@ -6,24 +6,34 @@
   background-position: center center;
   overflow: hidden;
 }
+
 .webest__title {
   font-family: 'gagalinregular';
   color: #2f3234;
-  margin-bottom: 42px;
-  padding-top: 130px;
+  margin-bottom: rem(42px);
+  padding-top: rem(130px);
 }
+
 .webest__list {
   display: flex;
-  margin-bottom: 150px;
+  margin-bottom: rem(150px);
+  @media (max-width: $tablets) {
+    flex-wrap: wrap;
+  }
 }
-.webest__item{
+
+.webest__item {
   flex: 1;
+  @media(max-width: $phones) {
+    display: flex;
+  }
 }
+
 .webest__img {
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .img__meat {
@@ -37,27 +47,45 @@
 .img__natural {
   background: url(../img/icons/natural.svg) no-repeat center center;
 }
+
+.webest__section {
+  @media (max-width: $phones) {
+    width: 240px;
+    margin-bottom: rem(10px);
+  }
+}
+
 .webest__subtitle {
   margin: 0 auto;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
   font-family: 'lifehack';
   color: #2f3234;
   line-height: 1.167;
-  width: 212px;
+  width: rem(212px);
   text-align: center;
   letter-spacing: -0.08em;
-  font-size: 28px;
+  font-size: rem(28px);
+
+  @media (max-width: $phones){
+    text-align: start;
+    margin: 0 0 rem(18px) 0;
+  }
 }
 
 .webest__text p {
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.714;
   text-align: center;
   color: rgba(47, 50, 52, 0.8);
-  margin: 0 10px;
+  margin: 0 rem(10px);
+
+  @media (max-width: $phones){
+    text-align: start;
+    margin: 0;
+  }
 }
 
 .webest__text3 {
-  margin-top: -8px;
+  margin-top: rem(-8px);
 }

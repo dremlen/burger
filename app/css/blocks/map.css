@@ -28,12 +28,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px 0 10px 0; }
+  margin: rem(10px) 0 rem(10px) 0; }
 
 .footer__adress {
   font-family: 'ubuntulight';
   font-weight: lighter;
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff; }
 
 .footer__phone {
@@ -43,14 +43,14 @@
 
 .icon__phone {
   fill: #e45028;
-  width: 10px;
-  height: 20px; }
+  width: rem(10px);
+  height: rem(20px); }
 
 .footer__number {
   font-family: 'ubuntubold';
   font-weight: bold;
-  font-size: 14px;
-  margin-left: 5px;
+  font-size: rem(14px);
+  margin-left: rem(5px);
   color: #e45028; }
 
 .footer__icon {
@@ -63,17 +63,15 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-top: 20px; }
+  padding-top: rem(20px); }
 
 .footer__item {
-  margin-left: 20px; }
+  margin-left: rem(20px); }
 
 .icon__social {
   fill: #ffffff;
-  width: 22px;
-  height: 22px;
+  width: rem(22px);
+  height: rem(22px);
   fill-opacity: 0.5; }
   .icon__social:hover {
     fill-opacity: 1; }
-
-/*# sourceMappingURL=map.css.map */

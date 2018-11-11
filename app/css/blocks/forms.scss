@@ -7,17 +7,17 @@
 .order__title {
   font-family: "Gagalinregular";
   color: #f9b43b;
-  padding-top: 130px;
-  margin-bottom: 45px;
+  padding-top: rem(130px);
+  margin-bottom: rem(45px);
 }
 .form__content{
   display: flex;
 }
 .form__block--title{
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }
 .form__inform {
   display: flex;
@@ -27,27 +27,27 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 .form__block{
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
     &:last-child{
-      margin-right: 10px;
+      margin-right: rem(10px);
     }
     &:first-child{
-      margin-left: 10px;
+      margin-left: rem(10px);
     }
 }
 .form__input {
   width: 100%;
-  height: 35px;
-  border-radius: 5px;
+  height: rem(35px);
+  border-radius: rem(5px);
   border: none;
 
    &:hover{
-      border:3px solid #f9b43b;
+      border:rem(3px) solid #f9b43b;
     }
 }
 
@@ -58,83 +58,89 @@
   flex-direction: column;
 }
 .form__comment{
-  height: 110px;
+  height: rem(110px);
   width: 100%;
 }
 // Радио
-
-.form__radio{
-  width: 100%;
+.order__form-row{
   display: flex;
-  margin-bottom: 20px;
+  margin-top: rem(16px);
 }
-.radio__label{
+.order__radio{
+  margin-left: rem(5px);
+  display: flex;
+}
+.order__radio-fake {
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  background: #fff;
   position: relative;
-  padding-right: 142px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(0px);
+    height: rem(0px);
+    border-radius: 50%;
+    background: $red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+  }
 }
-.radio__input{
+.order__radio-elem{
   position: absolute;
-  top:-100%;
-  left: 69%;
+  left: rem(99999px);
 }
-.radio__circle{
-  width: 15px;
-  height: 15px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: none;
-  margin: 11px 0 0 9px;
+.order__radio-elem:checked {
+  &+.order__radio-fake {
+    &:after {
+      width: rem(8px);
+      height: rem(8px);
+    }
+  }
 }
-.radio__point{
-  position: absolute;
-  top: 6px;
-  left: 6px;
-}
-.radio__text{
-  text-align: center;
-  font-family: 'ubuntulight';
-  font-size: 14px;
-  color: #ffffff;
-  margin-left: 27px;
-}
-.radio__input:checked+ .radio__circle .radio__point{
-  height: 8px;
-  border-radius: 50%;
-  background-color: #e45028;
-  width: 8px;
+
+.order__radio-title {
+  font-size: rem(14px);
+  color: #fff;
+  margin-left: rem(10px);
 }
 
 .form__chexbox{
   position: relative;
-  margin-bottom: 42px;
+  margin-bottom: rem(42px);
 }
 .form__check{
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   background-color: #ffffff;
   position: absolute;
-  left: 8px;
-  top: 8px;
+  left: rem(8px);
+  top: rem(8px);
 }
 .check__img{
   position: absolute;
-  top: 12px;
-  left: 10px;
+  top: rem(12px);
+  left: rem(10px);
   z-index: 2;
   display: none;
 }
 .check__text{
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   position: absolute;
-  left: 33px;
-  top: 6px;
+  left: rem(33px);
+  top: rem(6px);
 }
 .form__checked--item{
   position: absolute;
   top: 70%;
-  left: 70%;
+  left: 999999999%;
 }
 .form__checked--item:checked+.check__img{
   display: block;
@@ -143,7 +149,7 @@
 .form__btn{
   background-color: #e45028;
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   border: none;
   text-transform: uppercase;
@@ -154,7 +160,7 @@
   border: none;
   text-transform: capitalize;
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   cursor: pointer;
 }

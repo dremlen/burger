@@ -5,7 +5,7 @@
 }
 
 .comment__item {
-  margin-top: -2px;
+  margin-top: rem(-2px);
   width: 25%;
   height: 50%;
   background-size: cover;
@@ -22,32 +22,32 @@
 }
 
 .comment__info {
-  width: 226px;
-  height: 230px;
-  margin: 44px auto;
+  width: rem(226px);
+  height: rem(230px);
+  margin: rem(44px) auto;
   display: none;
 }
 
 .comment__name {
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'gagalinregular';
   color: rgb(255, 255, 255);
   line-height: 2.008;
   text-align: left;
   letter-spacing: -0.09em;
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }
 
 .comment__text p {
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: 'ubuntulight';
   color: rgb(255, 255, 255);
   line-height: 1.714;
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }
 
 .comment__btn {
-  font-size: 13px;
+  font-size: rem(13px);
   font-family: "Ubuntu";
   font-weight: medium;
   color: rgb(255, 255, 255);

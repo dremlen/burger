@@ -9,19 +9,25 @@
   display: flex;
   width: 100%;
  justify-content: space-between;
-  padding-top: 10px;
+  padding-top: rem(10px);
   align-items: center;
 }
 .header__nav{
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin-right: 11px;
-  margin-top: -10px;
+  margin-right: rem(11px);
+  margin-top: rem(-10px);
 }
 .nav__list{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+
+  @media (max-width: $tablets){
+    display: none;
+  }
 }
 .nav__item {
   &:last-child {
@@ -35,7 +41,7 @@
   align-items: center;
   color: #fff;
   font-family: ubuntu;
-  font-size: 13px;
+  font-size: rem(13px);
   font-style: normal;
   font-weight: medium;
   text-transform: uppercase;
@@ -43,11 +49,11 @@
   &:after {
     content: "";
     display: block;
-    width: 4px;
-    height: 4px;
+    width: rem(4px);
+    height: rem(4px);
     border-radius: 50%;
     background: #fff;
-    margin: 0 16px;
+    margin: 0 rem(16px);
     align-items: center;
   }
   &:hover{
@@ -58,11 +64,11 @@
   background: #e35028;
   color: #fff;
   font-family: 'ubuntu';
-  font-size: 13px;
+  font-size: rem(13px);
   font-style: normal;
   font-weight: medium;
   text-transform: uppercase;
-  margin-left: 15px;
+  margin-left: rem(15px);
   &:hover{
     background: #c1401e;
   }
@@ -72,13 +78,18 @@
   display: flex;
   width: 100%;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: rem(80px);
+
+  @media (max-width: $tablets) {
+    flex-direction: column;
+  }
 }
 .content__burger{
   width: 50%;
   background-image: url(../img/elements/drops.png);
   background-repeat: no-repeat;
-  background-position: 25px 55px;
+  background-position: top right;
+  background-size: contain;
   display: flex;
   justify-content: flex-end;
 }
@@ -86,31 +97,46 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablets){
+    width: 100%;
+  }
 }
 .content__title{
   font-family: 'gagalinregular';
   color: #f9b43b;
-  margin-top: 40px;
-  padding: 20px 7px;
+  margin-top: rem(40px);
+  padding: rem(20px) rem(7px);
   text-align: start;
+
+  @media (max-width: $tablets) {
+    text-align: center;
+    align-self: center;
+  }
 }
 .content__text{
-  font-size: 65px;
+  font-size: rem(65px);
   font-family: 'lifehack';
   color: #fff;
   text-transform: lowercase;
   line-height: 1.01em;
-  margin-left: 3px;
+  margin-left: rem(3px);
+  letter-spacing: rem(-5px);
+
+  @media (max-width:$tablets){
+    text-align: center;
+    align-self: center;
+  }
 }
 .content__link{
-  margin-bottom: 39px;
+  margin-bottom: rem(39px);
   display: flex;
   justify-content: center;
 }
 .content__arrow{
-  width: 30px;
+  width: rem(30px);
   &:hover{
-    width: 35px;
+    width: rem(35px);
   }
 }
 

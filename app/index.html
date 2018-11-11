@@ -44,6 +44,9 @@
               </li>
             </ul>
             <a href="#" class="header__btn btn">Заказать</a>
+            <a class="hamburger-menu-link" href="">
+              <div class="hamburger-menu-link__bars"></div>
+            </a>
           </nav>
         </header>
         <div class="content"> 
@@ -68,28 +71,34 @@
         <ul class="webest__list">
           <li class="webest__item">
             <div class="webest__img img__meat"></div>
-            <h3 class="webest__subtitle">100% свежее мясо</h3>
-            <div class="webest__text">
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
-                неравномерен.</p>
+            <div class="webest__section">
+              <h3 class="webest__subtitle">100% свежее мясо</h3>
+              <div class="webest__text">
+                <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
+                  неравномерен.</p>
+              </div>
             </div>
           </li>
           <li class="webest__item">
             <div class="webest__img img__hand"></div>
-            <h3 class="webest__subtitle">Ручная сборка</h3>
-            <div class="webest__text">
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое
-              полустишие притягивает сюжетный
-              реформаторский пафос.</p>
+            <div class="webest__section">
+              <h3 class="webest__subtitle">Ручная сборка</h3>
+              <div class="webest__text">
+                <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое
+                полустишие притягивает сюжетный
+                реформаторский пафос.</p>
+              </div>
             </div>
           </li>
           <li class="webest__item">
             <div class="webest__img img__natural"></div>
-            <h3 class="webest__subtitle">Натуральные
-              ингредиенты</h3>
-            <div class="webest__text webest__text3">
-              <p>Драма представляет собой деструктивный цикл. Анапест представляет собой
-              анапест.</p>
+            <div class="webest__section">
+              <h3 class="webest__subtitle">Натуральные
+                ингредиенты</h3>
+              <div class="webest__text webest__text3">
+                <p>Драма представляет собой деструктивный цикл. Анапест представляет собой
+                анапест.</p>
+              </div>
             </div>
           </li>
         </ul>
@@ -360,20 +369,16 @@
                 <div class="form__block--title">Комментарий</div>
                 <textarea name="comment" class="form__comment"></textarea>
               </div>
-              <div class="form__radio">
-                <label class="radio__label">
-                  <input type="radio" class="radio__input" name="pay">
-                  <div class="radio__circle ">
-                    <div class="radio__point"></div>
-                    <span class="radio__text">Потребуется сдача</span>
-                  </div>
+              <div class="order__form-row">
+                <label class="order__radio">
+                  <input class="order__radio-elem" name="payment" type="radio">
+                  <div class="order__radio-fake"></div>
+                  <div class="order__radio-title">Потребуется сдача</div>
                 </label>
-                <label class="radio__label">
-                  <input type="radio" class="radio__input"  name="pay">
-                  <div class="radio__circle">
-                    <div class="radio__point"></div>                    
-                    <span class="radio__text">Оплата по карте</span>
-                  </div>
+                <label class="order__radio">
+                  <input class="order__radio-elem" name="payment" type="radio" checked>
+                  <div class="order__radio-fake"></div>
+                  <div class="order__radio-title">Оплата по карте</div>
                 </label>
               </div>
               <div class="form__chexbox">
