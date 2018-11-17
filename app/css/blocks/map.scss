@@ -1,4 +1,5 @@
 .map{
+  height: 100vh;
   background: url(../img/background/map.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -14,21 +15,42 @@
 }
 .footer__conteiner{
   display: flex;
+  width: 960px;
+
+  @media(max-width: $phones) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer__contact{
   width: 50%;
   display: flex;
   flex-direction: column;
   margin:rem(10px) 0 rem(10px) 0;
+
+  @media(max-width: $phones) {
+    align-items: center;
+
+  }
 }
 .footer__adress{
   font-family: 'ubuntulight';
   font-weight: lighter;
   font-size: rem(14px);
   color: #ffffff;
+
+  @media(max-width: $phones) {
+    justify-content: center;
+    text-align: center;
+  }
+
 }
 .footer__phone{
   display: flex;
+
+  @media(max-width: $phones) {
+    justify-content: center;
+  }
 }
 .icon__phone{
   fill: #e45028;
@@ -49,6 +71,12 @@
   display: flex;
   justify-content: flex-end;
   padding-top: rem(20px);
+
+    @media(max-width: $phones) {
+      align-items: center;
+      justify-content: center;
+    }
+
 }
 .footer__item{
   margin-left: rem(20px);

@@ -16,6 +16,8 @@
 
 .webest__list {
   display: flex;
+  width: 100%;
+  justify-content: center;
   margin-bottom: rem(150px);
   @media (max-width: $tablets) {
     flex-wrap: wrap;
@@ -23,41 +25,67 @@
 }
 
 .webest__item {
+  max-width: rem(300px);
+  display: flex;
   flex: 1;
+  flex-direction: column;
+
+  @media(max-width: $tablets){
+    flex-wrap: wrap;
+  }
   @media(max-width: $phones) {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 }
 
 .webest__img {
+  margin: 0 auto;
+  margin-bottom: rem(18px);
+  text-align: center;
+}
+.meat{
   width: rem(100px);
   height: rem(100px);
-  margin: 0 auto;
-  margin-bottom: rem(20px);
-}
 
-.img__meat {
-  background: url(../img/icons/meat.svg) no-repeat center center;
+  @media(max-width: $phones){
+    width: rem(70px);
+    height: rem(70px);
+  }
 }
+.hand{
+  width: rem(100px);
+  height: rem(100px);
 
-.img__hand {
-  background: url(../img/icons/hand.svg) no-repeat center center;
+    @media(max-width: $phones) {
+      width: rem(70px);
+      height: rem(70px);
+    }
+
 }
+.natural{
+  width: rem(100px);
+  height: rem(100px);
 
-.img__natural {
-  background: url(../img/icons/natural.svg) no-repeat center center;
+    @media(max-width: $phones) {
+      width: rem(70px);
+      height: rem(70px);
+    }
+
 }
 
 .webest__section {
   @media (max-width: $phones) {
-    width: 240px;
+    width: rem(240px);
     margin-bottom: rem(10px);
   }
 }
 
 .webest__subtitle {
   margin: 0 auto;
-  margin-bottom: rem(18px);
+  margin-bottom: rem(14px);
   font-family: 'lifehack';
   color: #2f3234;
   line-height: 1.167;
@@ -78,7 +106,6 @@
   line-height: 1.714;
   text-align: center;
   color: rgba(47, 50, 52, 0.8);
-  margin: 0 rem(10px);
 
   @media (max-width: $phones){
     text-align: start;

@@ -70,7 +70,11 @@
         <h2 class="webest__title title">Мы лучшие</h2>
         <ul class="webest__list">
           <li class="webest__item">
-            <div class="webest__img img__meat"></div>
+            <div class="webest__img">
+              <svg class="meat">
+                <use xlink:href="./sprite.svg#meat"></use>
+              </svg>
+            </div>
             <div class="webest__section">
               <h3 class="webest__subtitle">100% свежее мясо</h3>
               <div class="webest__text">
@@ -80,7 +84,11 @@
             </div>
           </li>
           <li class="webest__item">
-            <div class="webest__img img__hand"></div>
+            <div class="webest__img">
+              <svg class="hand">
+                <use xlink:href="./sprite.svg#hand"></use>
+              </svg>
+            </div>
             <div class="webest__section">
               <h3 class="webest__subtitle">Ручная сборка</h3>
               <div class="webest__text">
@@ -91,7 +99,11 @@
             </div>
           </li>
           <li class="webest__item">
-            <div class="webest__img img__natural"></div>
+            <div class="webest__img">
+              <svg class="natural">
+                <use xlink:href="./sprite.svg#natural"></use>
+              </svg>
+            </div>
             <div class="webest__section">
               <h3 class="webest__subtitle">Натуральные
                 ингредиенты</h3>
@@ -105,6 +117,59 @@
       </div>
     </section>
 
+<!-- Слайдер -->
+
+    <section class="section__wrapper composition">
+      <div class="composition__slaider">
+        <a href="#" class=" slaider__scrool slaider__scrool-left">
+          <svg class="scrool">
+            <use xlink:href="./sprite.svg#scrool"></use>
+          </svg>
+        </a>
+        <div class="slaider__conteiner">
+          <div class="slaider__compile compile">
+            <svg class="burger">
+              <use xlink:href="./sprite.svg#burger"></use>
+            </svg>
+            <h3 class="compile__title">Состав</h3>
+          </div>
+          <div class="slaider__kkal">
+            <svg class="kkal">
+              <use xlink:href="./sprite.svg#kkal"></use>
+            </svg>
+            <div class="kkal__namber">1200</div>
+            <h4 class="kkal__text">Ккал</h4>
+          </div>
+          <div class="slaider__images">
+            <div class="images__burger">
+              <img src="./img/elements/Бургер.png" alt="Бургер" class="burger__black">
+            </div>
+          </div>
+          <div class="slaider__content">
+            <h2 class="slaider__title title">Dark BEEFBurger</h2>
+            <div class="slaider__text">
+              <p>
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              </p>
+            </div>
+            <div class="slaider__order">
+              <div class="slaider__sell sell">
+                <div class="sell__namber">500</div>
+                <div class="sell__rub">Рублей</div>
+              </div>
+              <button class="slaider__btn btn" type="button">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="slaider__scrool slaider__scrool-reght">
+          <svg class="scrool">
+            <use xlink:href="./sprite.svg#scrool"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
 
 <!-- Команда -->
 
@@ -113,7 +178,7 @@
         <h2 class="team__title title">Команда</h2>
         <ul class="accordeon accordeon__list">
           <li class="accordeon__item">
-            <div class="accordeon__name">
+            <div class="accordeon__name ">
               <div class="accordeon__triangle"></div>
               <h3 class="accordeon__title">Дэниэл Редклиф</h3>
             </div>
@@ -228,7 +293,7 @@
 
     <section class="section__wrapper comments"> 
       <ul class="comment__list">
-        <li class="comment__item" style="background: url('./img/photo/photo-1.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-1.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -239,7 +304,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-2.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-2.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -251,7 +316,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-3.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-3.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -262,7 +327,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-4.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-4.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -273,7 +338,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-5.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-5.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -284,7 +349,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-6.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-6.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -295,7 +360,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-7.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-7.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -306,7 +371,7 @@
             <button class="comment__btn btn" type="button">Подробнее</button>
           </div>
         </li>
-        <li class="comment__item" style="background: url('./img/photo/photo-8.jpg')">
+        <li class="comment__item" style="background-image: url('./img/photo/photo-8.jpg')">
           <div class="comment__info">
             <h3 class="comment__name">Константин Спилберг</h3>
             <div class="comment__text">
@@ -358,7 +423,7 @@
                   <div class="form__block--title">Квартира</div>
                   <input type="text" class="form__input" name="room" value="">
                 </label>
-                <label for="floor" class="form__block">
+                <label for="floor" class="form__block form__block-floor">
                   <div class="form__block--title">Этаж</div>
                   <input type="text" class="form__input" name="floor" value="">
                 </label>

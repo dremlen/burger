@@ -1,4 +1,5 @@
 .team{
+  height: 100%;
   background: url(../img/background/SBS_1255-X2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -8,29 +9,37 @@
 .team__descript {
   position: absolute;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   right: 0;
   background-color: rgb(47, 50, 52);
   opacity: 0.7;
+
+  @media(max-width: $tablets){
+    width: 100%;
+  }
 }
 
 .team__title{
     font-family: 'gagalinregular';
     color: #f9b43b;
-    position: absolute;
-    top: rem(107px);
-    right: rem(147px);
+    margin-top: rem(100px);
+
+    @media(max-width: $tablets){
+      margin-top: rem(100px);
+      text-align: center;
+    }
     
 }
  .accordeon__list{
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: o;
-  right: 0;
-  margin-top: rem(205px);
+  margin-top: rem(35px);
   width: 100%;
+
+  @media(max-width: $tablets){
+    align-items: center;
+    margin-top: rem(50px);
+  }
 
  }
  .accordeon__item{
@@ -41,14 +50,31 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: rem(96px);
-  transition: all 2s;
+  margin-left: rem(90px);
+  margin-right: 5px;
 
-    &:active{
-      height: rem(155px);
-    }
+
+  @media(max-width: $tablets){
+    align-items: center;
+    margin-left: 0;
+  }
  }
- .accordeon__item:active .accordeon__triangle{
+ .accordeon__item--activ{
+    transition: all 2s;
+    height: rem(180px);
+
+      @media(max-width: $tablets) {
+        height: rem(275px);
+        transition: all 2s;
+      }
+      @media(max-width: $phones) {
+        height: rem(285px);
+        transition: all 2s;
+      }
+
+
+ }
+ .accordeon__item--activ .accordeon__triangle{
     display: block;
     border: rem(5px) solid transparent;
     border-bottom: rem(5px) solid #f9b43b;
@@ -56,13 +82,12 @@
     height: 0;
     margin-top: rem(3px);
  }
- .accordeon__item:active .accordeon__title{
+ .accordeon__item--activ .accordeon__title{
     color: #f9b43b;
-
  }
-
  .accordeon__name{
    display: flex;
+   flex: none;
  }
  .accordeon__triangle{
    display: block;
@@ -86,13 +111,22 @@
  .accordeon__desc{
    display: flex;
    margin-left: rem(25px);
+   align-items: center;
+   overflow: hidden;
+
+   @media(max-width: $tablets){
+     flex-direction: column;
+   }
  }
 .accordeon__photo{
-  width: rem(100px);
-  height: rem(100px);
-  border-radius: 50%;
   margin-right: rem(4px);
-  overflow: hidden;
+
+     @media(max-width: $tablets) {
+       margin: 0 auto;
+     }
+}
+.accordeon__img{
+  border-radius: 50%;
 }
 .accordeon__content{
   display: flex;
@@ -105,11 +139,22 @@
   color: #ffffff;
   font-family: 'ubuntubold';
   margin-bottom: rem(10px);
+
+     @media(max-width: $tablets) {
+       align-self: center;
+     }
+
 }
 .accordeon__text p{
     font-size: rem(14px);
     color: #ffffff;
     font-family: 'ubuntulight';
     line-height: rem(24px);
+    margin-right: rem(75px);
+
+    @media (max-width: $tablets) {
+      text-align: center;
+      margin-right: 0;
+    }
 }
 

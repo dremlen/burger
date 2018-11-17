@@ -30,6 +30,7 @@
   }
 }
 .nav__item {
+  padding-left: rem(10px);
   &:last-child {
     .nav__link:after {
       display: none;
@@ -53,8 +54,8 @@
     height: rem(4px);
     border-radius: 50%;
     background: #fff;
-    margin: 0 rem(16px);
     align-items: center;
+    margin-left: rem(10px);
   }
   &:hover{
     text-decoration: underline;

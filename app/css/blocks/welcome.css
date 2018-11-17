@@ -12,7 +12,7 @@ Error: Undefined variable: "$tablets".
 30:   }
 31: }
 32: .nav__item {
-33:   &:last-child {
+33:   padding-left: rem(10px);
 
 Backtrace:
 C:\Users\dremlen\Desktop\burgershop\app\css\blocks\welcome.scss:28
@@ -65,4 +65,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$tablets\".\A         on line 28 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\welcome.scss\A \A 23:   display: flex;\A 24:   flex-wrap: wrap;\A 25:   justify-content: center;\A 26:   align-items: center;\A 27: \A 28:   @media (max-width: $tablets){\A 29:     display: none;\A 30:   }\A 31: }\A 32: .nav__item {\A 33:   &:last-child {"; }
+  content: "Error: Undefined variable: \"$tablets\".\A         on line 28 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\welcome.scss\A \A 23:   display: flex;\A 24:   flex-wrap: wrap;\A 25:   justify-content: center;\A 26:   align-items: center;\A 27: \A 28:   @media (max-width: $tablets){\A 29:     display: none;\A 30:   }\A 31: }\A 32: .nav__item {\A 33:   padding-left: rem(10px);"; }

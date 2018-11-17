@@ -12,6 +12,12 @@
 }
 .form__content{
   display: flex;
+  margin-bottom: rem(50px);
+
+  @media(max-width: $tablets){
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .form__block--title{
   font-family: 'ubuntulight';
@@ -40,9 +46,16 @@
       margin-left: rem(10px);
     }
 }
+.form__block-floor{
+
+  @media(max-width: $phones){
+    display: none;
+  }
+}
 .form__input {
   width: 100%;
   height: rem(35px);
+  padding: 5px;
   border-radius: rem(5px);
   border: none;
 
@@ -58,6 +71,7 @@
   flex-direction: column;
 }
 .form__comment{
+  padding: 5px;
   height: rem(110px);
   width: 100%;
 }
@@ -113,6 +127,11 @@
 .form__chexbox{
   position: relative;
   margin-bottom: rem(42px);
+
+  @media(max-width: $phones){
+    margin-bottom: rem(42px);
+    margin-left: rem(30px);
+  }
 }
 .form__check{
   width: rem(15px);
@@ -144,6 +163,12 @@
 }
 .form__checked--item:checked+.check__img{
   display: block;
+}
+.form__button{
+
+  @media(max-width: $phones) {
+    margin: 0 auto;
+  }
 }
   
 .form__btn{

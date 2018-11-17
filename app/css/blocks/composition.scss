@@ -1,0 +1,214 @@
+.composition{
+    background-image:linear-gradient(90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+
+}
+.composition__slaider{
+  display: flex;
+
+}
+.slaider__scrool{
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.slaider__scrool-left{
+  left: 5%;
+  writing-mode: vertical-rl;
+  transform: rotate(90deg);
+}
+.slaider__scrool-reght{
+  right: 5%;
+  writing-mode: vertical-rl;
+  transform: rotate(270deg);
+}
+.scrool{
+  width: rem(17px);
+  height: rem(30px);
+}
+.slaider__conteiner{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+
+    @media(max-width: $tablets){
+      flex-direction: column;
+    }
+  }
+
+// Состав
+.slaider__compile{
+  width: 90px;
+  height: 90px;
+  background-color: #e45028;
+  position: absolute;
+  top: 14%;
+  left: 82px;
+  border-radius:5px; 
+   text-align: center;
+
+
+    @media(max-width: $tablets) {
+      top: 5%;
+      left: 15%;
+    }
+
+    @media(max-width: $phones) {
+      top: 3%;
+      left: 5%;
+    }
+
+
+}
+.burger{
+  width: 45px;
+  height: 39px;
+  margin-top: 15px;
+}
+.compile__title{
+  color: #ffffff;
+  font-size: rem(14px);
+  font-family: 'gagalinregular';
+  text-align: center;
+}
+
+
+// Калории
+.slaider__kkal {
+  width: rem(80px);
+  height: rem(85px);
+  position: absolute;
+  left: rem(95px);
+  top: 74%;
+  overflow: hidden;
+  text-align: center;
+
+    @media(max-width: $tablets) {
+      top: 5%;
+      left: 85%;
+    }
+
+    @media(max-width: $phones) {
+      top:3%;
+      left: 80%;
+    }
+
+}
+
+.kkal {
+  width: rem(63px);
+  height: rem(60px);
+}
+
+.kkal__namber {
+  position: absolute;
+  top: 37%;
+  left: rem(28px);
+  color: #ffffff;
+  font-size: rem(14px);
+  font-family: 'gagalinregular';
+}
+
+.kkal__text {
+  color: #ffffff;
+  font-size: rem(14px);
+  font-family: 'gagalinregular';
+  text-align: center;
+}
+
+
+
+.slaider__images{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 167px;
+
+    @media(max-width: $tablets) {
+      width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 120px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+}
+.burger__black{
+
+        @media(max-width: $phones) {
+          width: 300px;
+        }
+
+}
+
+.slaider__content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+    @media(max-width: $tablets) {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      overflow: hidden;
+    }
+
+}
+.slaider__title{
+  color: #ffffff;
+  width: rem(330px);
+  text-align: start;
+  margin-bottom: rem(41px);
+  margin-top: 140px;
+
+    @media(max-width: $tablets) {
+      text-align: center;
+      margin-top: 20px;
+    }
+}
+.slaider__text p{
+  width: rem(445px);
+  margin-bottom: rem(10px);
+  font-size: rem(13.98px);
+  font-family: 'ubuntulight';
+  color: #ffffff;
+  line-height: 24px;
+
+    @media(max-width: $tablets) {
+      text-align: center;
+    }
+
+}
+.slaider__order{
+  display: flex;
+}
+.sell{
+  display: flex;
+  font-family: 'gagalinregular';
+  color: #e35038;
+  margin-right: rem(30px);
+  align-items: baseline;
+}
+.sell__namber{
+  text-transform: uppercase;
+  font-size: rem(71.92px);
+}
+.sell__rub{
+  font-size: rem(29.96px);
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.slaider__btn{
+  background-color: #e45028;
+  color: #ffffff;
+  font-size: rem(12.98px);
+  font-family: 'ubuntu';
+  font-weight: medium;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
