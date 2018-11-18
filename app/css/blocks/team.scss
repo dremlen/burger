@@ -11,8 +11,7 @@
   width: 50%;
   height: 100%;
   right: 0;
-  background-color: rgb(47, 50, 52);
-  opacity: 0.7;
+  background-color: rgba(49, 52, 54, 0.7);
 
   @media(max-width: $tablets){
     width: 100%;
@@ -88,6 +87,7 @@
  .accordeon__name{
    display: flex;
    flex: none;
+   cursor: pointer;
  }
  .accordeon__triangle{
    display: block;
@@ -105,7 +105,7 @@
    font-family: 'gagalinregular';
    margin-bottom: rem(15px);
    margin-left: rem(9px);
-
+  cursor: pointer;
  }
 
  .accordeon__desc{
