@@ -29,6 +29,10 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media(max-width: $phones){
+    width: 100%;
+  }
 }
 
 .form__row {
@@ -69,6 +73,12 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+
+    @media(max-width: $phones) {
+      width: 100%;
+      justify-content: center;
+    }
+
 }
 .form__comment{
   padding: 5px;
@@ -79,6 +89,11 @@
 .order__form-row{
   display: flex;
   margin-top: rem(16px);
+
+      @media(max-width: $phones) {
+        justify-content: center;
+      }
+
 }
 .order__radio{
   margin-left: rem(5px);
@@ -130,7 +145,7 @@
 
   @media(max-width: $phones){
     margin-bottom: rem(42px);
-    margin-left: rem(30px);
+    margin-left: rem(120px);
   }
 }
 .form__check{
@@ -179,6 +194,11 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+
+      &:hover {
+        background: #c1401e;
+      }
+
 }
 .form__btn--reset{
   background-color: rgba(255, 255, 255, 0);
