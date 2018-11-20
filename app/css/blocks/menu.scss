@@ -29,10 +29,9 @@
   overflow: hidden;
   display: flex;
   transition: all 2s;
-
-    &:active{
-      width: rem(620px);
-    }
+}
+.menu__item--active{
+  width: rem(620px);
 }
 .menu__name{
   writing-mode: vertical-rl;

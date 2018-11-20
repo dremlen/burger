@@ -241,7 +241,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0; padding: 0; }
 .menu__list { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; top: 0; bottom: 0; right: 0; z-index: 2; }
 
 .menu__item { width: 5rem; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-transition: all 2s; transition: all 2s; }
-.menu__item:active { width: 38.75rem; }
+
+.menu__item--active { width: 38.75rem; }
 
 .menu__name { -webkit-writing-mode: vertical-rl; -ms-writing-mode: tb-rl; writing-mode: vertical-rl; -webkit-transform: rotate(180deg); transform: rotate(180deg); font-size: 2.5rem; font-family: 'gagalinregular'; padding: 1.375rem 0.8125rem 0 0.8125rem; color: #ffffff; }
 .menu__name:last-child { margin-left: -1.25rem; }
@@ -338,7 +339,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0; padding: 0; }
 
 .form__btn--reset { background-color: rgba(255, 255, 255, 0); border: none; text-transform: capitalize; font-family: 'ubuntulight'; font-size: 0.875rem; color: #ffffff; cursor: pointer; }
 
-.map { height: 100vh; background: url(../img/background/map.jpg) no-repeat center center; background-size: cover; position: relative; }
+.map { height: 100vh; }
+
+.maps { width: 100%; height: 100vh; overflow: hidden; }
 
 .footer { background-color: #141414; position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; left: 0; right: 0; bottom: 0; z-index: 2; }
 

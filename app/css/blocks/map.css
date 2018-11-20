@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$phones".
-        on line 20 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss
+        on line 22 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss
 
-15: }
-16: .footer__conteiner{
-17:   display: flex;
-18:   width: 960px;
-19: 
-20:   @media(max-width: $phones) {
-21:     flex-direction: column;
-22:     align-items: center;
-23:   }
-24: }
-25: .footer__contact{
+17: }
+18: .footer__conteiner{
+19:   display: flex;
+20:   width: 960px;
+21: 
+22:   @media(max-width: $phones) {
+23:     flex-direction: column;
+24:     align-items: center;
+25:   }
+26: }
+27: .footer__contact{
 
 Backtrace:
-C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss:20
+C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss:22
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -65,4 +65,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$phones\".\A         on line 20 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss\A \A 15: }\A 16: .footer__conteiner{\A 17:   display: flex;\A 18:   width: 960px;\A 19: \A 20:   @media(max-width: $phones) {\A 21:     flex-direction: column;\A 22:     align-items: center;\A 23:   }\A 24: }\A 25: .footer__contact{"; }
+  content: "Error: Undefined variable: \"$phones\".\A         on line 22 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\map.scss\A \A 17: }\A 18: .footer__conteiner{\A 19:   display: flex;\A 20:   width: 960px;\A 21: \A 22:   @media(max-width: $phones) {\A 23:     flex-direction: column;\A 24:     align-items: center;\A 25:   }\A 26: }\A 27: .footer__contact{"; }

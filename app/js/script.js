@@ -30,3 +30,34 @@ menuLink.addEventListener('click', function(event){
 close.addEventListener('click', function(){
   mobMenu.style.display = 'none';
 });
+
+
+// Меню 
+
+const mItem = document.querySelectorAll('.menu__item');
+const mName = document.querySelectorAll('.menu__name');
+const mActiv = 'menu__item--active';
+
+for(i=0; i<mName.length; i++){
+  mName[i].addEventListener('click', function(){
+    for(n=0; n<mItem.length; n++){
+      if (mItem[n].classList.contains(mActiv)){
+        mItem[n].classList.remove(mActiv);
+      }
+      this.parentNode.classList.add(mActiv);
+    }
+  });
+}
+
+// карта
+
+ymaps.ready(init);
+
+function init(){
+  var map = new ymaps.Map('map',{
+    center:[59.94, 30.32],
+    zoom: 12,
+    controls:['zoomControl'],
+    behaviors:['drag']
+  });
+}
