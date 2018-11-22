@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$tablets".
-        on line 34 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss
+        on line 52 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss
 
-29:   display: flex;
-30:   flex-wrap: wrap;
-31:   width: 100%;
-32:   justify-content: center;
-33: 
-34:     @media(max-width: $tablets){
-35:       flex-direction: column;
-36:     }
-37:   }
-38: 
-39: // Состав
+47:   display: flex;
+48:   flex-wrap: wrap;
+49:   width: 100vw;
+50:   justify-content: center;
+51: 
+52:     @media(max-width: $tablets){
+53:       flex-direction: column;
+54:       flex-wrap:nowrap;
+55:     }
+56:   }
+57: 
 
 Backtrace:
-C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss:34
+C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss:52
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$tablets\".\A         on line 34 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss\A \A 29:   display: flex;\A 30:   flex-wrap: wrap;\A 31:   width: 100%;\A 32:   justify-content: center;\A 33: \A 34:     @media(max-width: $tablets){\A 35:       flex-direction: column;\A 36:     }\A 37:   }\A 38: \A 39: // Состав"; }
+  content: "Error: Undefined variable: \"$tablets\".\A         on line 52 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\composition.scss\A \A 47:   display: flex;\A 48:   flex-wrap: wrap;\A 49:   width: 100vw;\A 50:   justify-content: center;\A 51: \A 52:     @media(max-width: $tablets){\A 53:       flex-direction: column;\A 54:       flex-wrap:nowrap;\A 55:     }\A 56:   }\A 57: "; }

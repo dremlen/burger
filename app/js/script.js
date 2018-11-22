@@ -61,3 +61,38 @@ function init(){
     behaviors:['drag']
   });
 }
+
+// Слайдер
+
+const left = document.querySelector('.slaider__scrool-left');
+const right = document.querySelector('.slaider__scrool-reght');
+const slaids = document.querySelector('.slaider__list');
+const minRight = 0;
+const maxRight = 400;
+const step = 100;
+let currentRight = 0;  
+
+slaids.style.right= currentRight;
+
+right.addEventListener('click', function(e){
+  e.preventDefault();
+  if(currentRight<maxRight){
+     currentRight +=step; 
+  }
+  else{
+    currentRight = 0;
+    slaids.style.right = 0;
+  }
+  slaids.style.right = currentRight + "vw";
+});
+
+left.addEventListener('click', function(e){
+  e.preventDefault();
+  if(currentRight > minRight){
+    currentRight -=step;
+  }
+  else{
+    currentRight = maxRight;
+  }
+  slaids.style.right = currentRight + "vw";
+});
