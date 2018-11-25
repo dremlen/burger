@@ -13,7 +13,7 @@
   <div class="wrapper">
 
     <!-- приветственная страничка -->
-<section class="section__wrapper welcome">
+    <section class="section__wrapper welcome">
       <div class="conteiner">
         <header class="header">
           <a href="#" class="header__logo logo">
@@ -548,39 +548,44 @@
     <section class="section__wrapper order">
       <div class="conteiner">
         <h2 class="order__title title">Закажите доставку</h2>
-        <form action="#" class="form" method="POST">
+        <form class="form">
           <div class="form__content">
             <div class="form__inform">
               <div class="form__row">
-                <label for="name" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Имя</div>
-                  <input type="text" class="form__input" name="name" value="">
+                  <input type="text" class="form__input" name="name" value="" required>
+                  <div class="eror"></div>
                 </label>
-                <label for="tel" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Телефон</div>
-                  <input type="tel" class="form__input" name="tel" placeholder="89212264923" value="">
+                  <input type="tel" class="form__input" name="tel" placeholder="89212264923" value="" required>
+                  <div class="eror"></div>
                 </label>
               </div>
               <div class="form__row">
-                <label for="street" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Улица</div>
-                  <input type="text" class="form__input" name="street" value="">
+                  <input type="text" class="form__input" name="street" value="" required>
+                  <div class="eror"></div>
                 </label>
               </div>
               <div class="form__row">
-                <label for="house" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Дом</div>
-                  <input type="text" class="form__input" name="house" value="">
+                  <input type="text" class="form__input" name="house" value="" required>
+                  <div class="eror"></div>
                 </label>
-                <label for="housing" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Корпус</div>
                   <input type="text" class="form__input" name="housing" value="">
                 </label>
-                <label for="room" class="form__block">
+                <label class="form__block">
                   <div class="form__block--title">Квартира</div>
-                  <input type="text" class="form__input" name="room" value="">
+                  <input type="text" class="form__input" name="room" value="" required>
+                  <div class="eror"></div>
                 </label>
-                <label for="floor" class="form__block form__block-floor">
+                <label class="form__block form__block-floor">
                   <div class="form__block--title">Этаж</div>
                   <input type="text" class="form__input" name="floor" value="">
                 </label>
@@ -679,7 +684,7 @@
       <a href="#" class="mobail__closing">
         <img src="./img/elements/Крестик.png" alt="Закрывашка" class="closing__img">
       </a>
-    <ul class="mobail__list">
+      <ul class="mobail__list">
         <li class="mobail__item">
           <a href="#" class="mobail__link">О нас</a>
         </li>
@@ -702,6 +707,15 @@
           <a href="#" class="mobail__link">Контакты</a>
         </li>
       </ul>
+    </div>
+
+    <!-- Модалка формы -->
+
+    <div class="modal">
+      <div class="modal__conteiner">
+        <h2 class="modal__title">Сообщение отправлено</h2>
+        <a href="#" class="modal__btn btn">Закрыть</a>
+      </div>
     </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
