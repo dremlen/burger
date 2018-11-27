@@ -65,6 +65,7 @@
   left: rem(82px);
   border-radius:rem(5px); 
    text-align: center;
+   cursor: pointer;
 
 
     @media(max-width: $tablets) {
@@ -77,6 +78,43 @@
       left: 5%;
     }
 
+.composit{
+  width: rem(270px);
+  height: rem(330px);
+  background: #ffffff;
+  border-radius: 2%;
+  position: absolute;
+  top: 0;
+  left: rem(90px);
+  z-index: 100;
+  display: none;
+}
+.composit__list{
+  margin: rem(18px) rem(20px) rem(21px) rem(21px);
+}
+.composit__item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(23px);
+}
+.composit__img{
+  width: rem(30px);
+  height: rem(30px);
+
+}
+.composit__text{
+  color: #2f3234;
+  font-size: rem(14px);
+  font-family: 'ubuntu';
+  font-weight: medium;
+  text-align: center;
+}
+.composit__massa{
+  color: #2f3234;
+  font-size: rem(14px);
+  font-family: 'ubuntulight';
+  text-align: center;
+}
 
 }
 .burger{

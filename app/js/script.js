@@ -1,20 +1,19 @@
 // Команда
-const accName = document.querySelectorAll('.accordeon__name');
-const accItem = document.querySelectorAll('.accordeon__item');
-const activ = 'accordeon__item--activ';
+$(function(){
+  const accordItems = $('.accordeon__item');
+  const accordName = $('.accordeon__name');
+  const activ = 'accordeon__item--activ';
 
-for(i=0; i<accName.length; i++){
-  accName[i].addEventListener('click', function(){
-    for(i=0; i<accItem.length; i++){
-      if (accItem[i].classList.contains(activ)){
-        accItem[i].classList.remove(activ);
-      }     
-      this.parentNode.classList.add(activ);
+  accordName.on('click', function(){
+    let clickName = $(this).closest(accordItems);
+    if(clickName.hasClass(activ)){
+      clickName.removeClass(activ);
+    }
+      else{
+        clickName.addClass(activ).siblings().removeClass(activ);
       }
-    }   
-  )
-};
-
+  })
+});
 
 // Мобильное меню
 
@@ -35,20 +34,22 @@ close.addEventListener('click', function(event){
 
 // Меню 
 
-const mItem = document.querySelectorAll('.menu__item');
-const mName = document.querySelectorAll('.menu__name');
-const mActiv = 'menu__item--active';
+$(function(){
+  const mItem = $('.menu__item');
+  const mName = $('.menu__name');
+  const mActiv = 'menu__item--active';
 
-for(i=0; i<mName.length; i++){
-  mName[i].addEventListener('click', function(){
-    for(n=0; n<mItem.length; n++){
-      if (mItem[n].classList.contains(mActiv)){
-        mItem[n].classList.remove(mActiv);
-      }
-      this.parentNode.classList.add(mActiv);
+  mName.on('click', function(){
+    let mClick = $(this).closest(mItem);
+    if(mClick.hasClass(mActiv)){
+      mClick.removeClass(mActiv);
     }
-  });
-}
+      else{
+        mClick.addClass(mActiv).siblings().removeClass(mActiv);
+      }
+  })
+});
+
 
 // карта
 
@@ -98,7 +99,21 @@ left.addEventListener('click', function(e){
   slaids.style.right = currentRight + "vw";
 });
 
+$(function(){
+  const compil = $('.compile');
+  const composit = $('.composit');
 
+  compil.on('click', function(e){
+    e.preventDefault();
+    var clickCompil = $(this).children(composit).last(); 
+    if(clickCompil.css('display') == 'none'){
+      clickCompil.css('display', 'block');
+    }
+    else{
+      clickCompil.css('display', 'none');
+    }
+  });
+});
 // Отправка формы
 
 const form = document.querySelector('.form');
@@ -164,3 +179,5 @@ function validateFild(blocks){
       return true;
     }
 }
+
+// Модалка комментария

@@ -1,0 +1,47 @@
+.modalcom{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(49, 51, 52, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modalcom__conteiner{
+  display: flex;
+  flex-direction: column;
+  padding: rem(20px);
+  width: rem(440px);
+  height: rem(235px);
+  justify-content: flex-start;
+  border-radius: 5%;
+  background: #fff;
+
+      @media (max-width: $phones) {
+        width: rem(240px);
+        height: rem(340px);
+      }
+}
+.modalcom__top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(5px);
+}
+.modalcom__title{
+  text-align: center;
+  color: #2f3234;
+  font-size: rem(14px);
+  font-family: 'gagalinregular';
+  text-transform: uppercase;
+}
+.modalcom__text p{
+  font-family: 'ubuntulight';
+  font-size: rem(14px);
+  line-height: 1.714;
+  color: #2f3234;
+  text-align: start;
+}
