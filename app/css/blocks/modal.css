@@ -13,7 +13,8 @@
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  z-index: 2; }
 
 .modal__conteiner {
   width: rem(196px);
@@ -33,7 +34,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
   text-align: center;
   -webkit-transition: all 3s;
   transition: all 3s; }
@@ -58,4 +58,5 @@
   text-transform: uppercase; }
   .modal__btn:hover {
     background: #e34028; }
+
 /*# sourceMappingURL=modal.css.map */

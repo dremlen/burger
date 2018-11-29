@@ -55,14 +55,90 @@ $(function(){
 
 ymaps.ready(init);
 
-function init(){
-  var map = new ymaps.Map('map',{
-    center:[59.94, 30.32],
-    zoom: 12,
-    controls:['zoomControl'],
-    behaviors:['drag']
-  });
-}
+  var placemarks = [
+    {
+      latitude: 59.97,
+      longitude: 30.31,
+      hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__img" src="img/elements/map-marker.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас!',
+        '</div>'
+      ]
+    },
+    {
+      latitude: 59.94,
+      longitude: 30.25,
+      hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__img" src="img/elements/map-marker.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас!',
+        '</div>'
+      ]
+    },
+    {
+      latitude: 59.93,
+      longitude: 30.34,
+      hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__img" src="img/elements/map-marker.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас!',
+        '</div>'
+      ]
+    },
+    {
+      latitude: 59.92,
+      longitude: 30.50,
+      hintContent: '<div class="map__hint">ул. Лопатина, д. 48</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__img" src="img/elements/map-marker.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас!',
+        '</div>'
+      ]
+    }
+  ],
+    geoObjects = [];
+
+  function init() {
+    var map = new ymaps.Map('map', {
+      center: [59.94, 30.32],
+      zoom: 12,
+      controls: ['zoomControl'],
+      behaviors: ['drag']
+    });
+
+  for (var i = 0; i < placemarks.length; i++) {
+    geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+      {
+        hintContent: placemarks[i].hintContent,
+        balloonContent: placemarks[i].balloonContent.join('')
+      },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/elements/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57],
+        iconImageClipRect: [[415, 0], [461, 57]]
+      });
+  }
+    var clusterer = new ymaps.Clusterer({
+      clusterIcons: [
+        {
+          href: 'img/elements/map-marker.png',
+          size: [100, 100],
+          offset: [-50, -50]
+        }
+      ],
+      clusterIconContentLayout: null
+    });
+
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+  }
 
 // Слайдер
 
@@ -181,3 +257,30 @@ function validateFild(blocks){
 }
 
 // Модалка комментария
+$(function(){
+  const comBtn = $('.comment__btn');
+  const comItem = $('.comment__item');
+  const nohover = $('.nohover');
+  const modalCom = $('.modalcom');
+  const modalClose = $('.modalcom__closing');
+  const elem = $('.comment__list');
+
+  comBtn.on('click', function(event){
+    event.preventDefault();
+    var modal = $(this).parent().last().siblings().css('display', 'flex');
+    if(modal.css('display') == 'flex'){
+      comItem.addClass('nohover').removeClass('comment__item');
+    }
+  })
+
+  modalClose.on('click', function(event){
+    event.preventDefault();
+    modalCom.css('display', 'none');
+
+        if (modalCom.css('display') == 'none'){
+          
+       elem.children().addClass('comment__item').removeClass('nohover');
+
+    }
+  })
+});

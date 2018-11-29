@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$phones".
-        on line 24 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss
+        on line 26 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss
 
-19:   height: rem(235px);
-20:   justify-content: flex-start;
-21:   border-radius: 5%;
-22:   background: #fff;
-23: 
-24:       @media (max-width: $phones) {
-25:         width: rem(240px);
-26:         height: rem(340px);
-27:       }
-28: }
-29: .modalcom__top{
+21:   justify-content: flex-start;
+22:   border-radius: 5%;
+23:   background: #fff;
+24:   opacity: 1;
+25: 
+26:       @media (max-width: $phones) {
+27:         width: rem(240px);
+28:         height: rem(340px);
+29:       }
+30: }
+31: .modalcom__top{
 
 Backtrace:
-C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss:24
+C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss:26
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$phones\".\A         on line 24 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss\A \A 19:   height: rem(235px);\A 20:   justify-content: flex-start;\A 21:   border-radius: 5%;\A 22:   background: #fff;\A 23: \A 24:       @media (max-width: $phones) {\A 25:         width: rem(240px);\A 26:         height: rem(340px);\A 27:       }\A 28: }\A 29: .modalcom__top{"; }
+  content: "Error: Undefined variable: \"$phones\".\A         on line 26 of C:\Users\dremlen\Desktop\burgershop\app\css\blocks\modalcom.scss\A \A 21:   justify-content: flex-start;\A 22:   border-radius: 5%;\A 23:   background: #fff;\A 24:   opacity: 1;\A 25: \A 26:       @media (max-width: $phones) {\A 27:         width: rem(240px);\A 28:         height: rem(340px);\A 29:       }\A 30: }\A 31: .modalcom__top{"; }

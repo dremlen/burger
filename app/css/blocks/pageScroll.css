@@ -1,0 +1,14 @@
+.pageScroll {
+  position: fixed;
+  top: 15%;
+  right: 12%; }
+
+.pageScroll__item {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=pageScroll.css.map */

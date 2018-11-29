@@ -10,6 +10,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 .modal__conteiner{
   width: rem(196px);
@@ -20,7 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   text-align: center;
   transition: all 3s;
 }

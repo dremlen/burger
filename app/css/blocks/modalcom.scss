@@ -10,6 +10,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 .modalcom__conteiner{
   display: flex;
@@ -20,6 +21,7 @@
   justify-content: flex-start;
   border-radius: 5%;
   background: #fff;
+  opacity: 1;
 
       @media (max-width: $phones) {
         width: rem(240px);
@@ -37,6 +39,11 @@
   font-size: rem(14px);
   font-family: 'gagalinregular';
   text-transform: uppercase;
+}
+.modal__closing{
+  cursor: pointer;
+  position: relative;
+  z-index: 200;
 }
 .modalcom__text p{
   font-family: 'ubuntulight';
