@@ -1,11 +1,11 @@
 // Команда
 $(function(){
-  const accordItems = $('.accordeon__item');
-  const accordName = $('.accordeon__name');
-  const activ = 'accordeon__item--activ';
+  var accordItems = $('.accordeon__item');
+  var accordName = $('.accordeon__name');
+  var activ = 'accordeon__item--activ';
 
   accordName.on('click', function(){
-    let clickName = $(this).closest(accordItems);
+    var clickName = $(this).closest(accordItems);
     if(clickName.hasClass(activ)){
       clickName.removeClass(activ);
     }
@@ -17,9 +17,9 @@ $(function(){
 
 // Мобильное меню
 
-const menuLink = document.querySelector('.hamburger-menu-link');
-const mobMenu  = document.querySelector('.mobail');
-const close    = document.querySelector('.mobail__closing');
+var menuLink = document.querySelector('.hamburger-menu-link');
+var mobMenu  = document.querySelector('.mobail');
+var close    = document.querySelector('.mobail__closing');
 
 menuLink.addEventListener('click', function(event){
   event.preventDefault();
@@ -35,12 +35,12 @@ close.addEventListener('click', function(event){
 // Меню 
 
 $(function(){
-  const mItem = $('.menu__item');
-  const mName = $('.menu__name');
-  const mActiv = 'menu__item--active';
+  var mItem = $('.menu__item');
+  var mName = $('.menu__name');
+  var mActiv = 'menu__item--active';
 
   mName.on('click', function(){
-    let mClick = $(this).closest(mItem);
+    var mClick = $(this).closest(mItem);
     if(mClick.hasClass(mActiv)){
       mClick.removeClass(mActiv);
     }
@@ -142,13 +142,13 @@ ymaps.ready(init);
 
 // Слайдер
 
-const left = document.querySelector('.slaider__scrool-left');
-const right = document.querySelector('.slaider__scrool-reght');
-const slaids = document.querySelector('.slaider__list');
-const minRight = 0;
-const maxRight = 400;
-const step = 100;
-let currentRight = 0;  
+var left = document.querySelector('.slaider__scrool-left');
+var right = document.querySelector('.slaider__scrool-reght');
+var slaids = document.querySelector('.slaider__list');
+var minRight = 0;
+var maxRight = 400;
+var step = 100;
+var currentRight = 0;  
 
 slaids.style.right= currentRight;
 
@@ -176,8 +176,8 @@ left.addEventListener('click', function(e){
 });
 
 $(function(){
-  const compil = $('.compile');
-  const composit = $('.composit');
+  var compil = $('.compile');
+  var composit = $('.composit');
 
   compil.on('click', function(e){
     e.preventDefault();
@@ -192,14 +192,14 @@ $(function(){
 });
 // Отправка формы
 
-const form = document.querySelector('.form');
-const orderBtn = document.querySelector('.form__btn');
+var form = document.querySelector('.form');
+var orderBtn = document.querySelector('.form__btn');
 
 orderBtn.addEventListener('click', function(event){
   event.preventDefault();
 
   if(validateFofm(form)){
-    const data = {
+    var data = {
       name:form.elements.name.value,
       tel:form.elements.tel.value,
       street: form.elements.street.value,
@@ -209,13 +209,13 @@ orderBtn.addEventListener('click', function(event){
       floor: form.elements.floor.value,
       comment: form.elements.comment.value
     };
-    const xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', function(){
-      const modalForm = document.querySelector('.modal');
-      const modBtn = document.querySelector('.modal__btn');
+      var modalForm = document.querySelector('.modal');
+      var modBtn = document.querySelector('.modal__btn');
       modalForm.style.display ='flex';
       modBtn.addEventListener('click', function(event){
         event.preventDefault();
@@ -226,7 +226,7 @@ orderBtn.addEventListener('click', function(event){
 });
 
 function validateFofm(form){
-  let valid = true;
+  var valid = true;
 
   if(!validateFild(form.elements.name)){
     valid = false;
@@ -258,12 +258,12 @@ function validateFild(blocks){
 
 // Модалка комментария
 $(function(){
-  const comBtn = $('.comment__btn');
-  const comItem = $('.comment__item');
-  const nohover = $('.nohover');
-  const modalCom = $('.modalcom');
-  const modalClose = $('.modalcom__closing');
-  const elem = $('.comment__list');
+  var comBtn = $('.comment__btn');
+  var comItem = $('.comment__item');
+  var nohover = $('.nohover');
+  var modalCom = $('.modalcom');
+  var modalClose = $('.modalcom__closing');
+  var elem = $('.comment__list');
 
   comBtn.on('click', function(event){
     event.preventDefault();

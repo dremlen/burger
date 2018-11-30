@@ -1,0 +1,13 @@
+.video{
+  background-image: url(../../img/background/BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.video__title {
+  font-family: 'gagalinregular';
+  color: #2f3234;
+  margin-bottom: rem(42px);
+  padding-top: rem(130px);
+}
