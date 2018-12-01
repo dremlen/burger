@@ -284,3 +284,87 @@ $(function(){
     }
   })
 });
+
+// Кнопочный скролл
+
+$(function(){
+  var sections = $('.section__wrapper');
+  var display = $('.maincontent')  
+
+  var inScroll = false;
+  var md = new MobileDetect(window.navigator.userAgent);
+  var isMobile = md.mobile();
+
+  var setActiveMenuItem = function(itemEq){
+    $('.pageScroll__item').eq(itemEq).addClass('activ').siblings().removeClass('activ');
+  };
+
+  var performTransition = function(sectionEq){
+    var position = sectionEq * -100 + '%';
+    var mouseInertionsFinished = 300;
+    var transitionIsFinished = 1000;
+
+    if(inScroll === false){
+      inScroll = true;
+      display.css({
+        transform: 'translateY(' + position + ')'
+      });
+      sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+
+      setTimeout(function(){
+        inScroll = false;
+        setActiveMenuItem(sectionEq);
+      }, transitionIsFinished + mouseInertionsFinished);
+    }
+  };
+
+  var scrollToSection = function(direction){
+    var activeSection = sections.filter('.active');
+    var prevSection = activeSection.prev();
+    var nextSection = activeSection.next();
+
+    if(direction === "up" && prevSection.length){
+      performTransition(prevSection.index());
+    }
+    if(direction === "down" && nextSection.length){
+      performTransition(nextSection.index());
+    }
+  };
+
+  $(document).on({
+    wheel: function(e){
+      var direction = e.originalEvent.deltaY > 0 ? "down" : "up";
+      scrollToSection(direction);
+    },
+    keydown: function(e){
+      switch(e.keyCode){
+        case 40:
+          scrollToSection("down");
+          break;
+        case 38:
+          scrollToSection("up");
+          break;  
+      }
+    },
+    touchmove: function(e){
+      e.preventDefault();
+    }
+  });
+
+  $("[data-scroll-to]").on("click", function(e){
+    e.preventDefault();
+
+    var target =$(e.currentTarget).attr("data-scroll-to");
+    performTransition(target);
+  });  
+
+  if(isMobile){
+    $(document).swipe({
+      swipe:function(
+        event,direction,distance,duration,fingerCount,filterData
+      ) {
+        var scrollDirection =direction ==="down" ? "up": "down";
+      }
+    })
+  };
+});
