@@ -368,3 +368,71 @@ $(function(){
     })
   };
 });
+
+// Видео
+
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('yt__player', {
+    height: '405',
+    width: '660',
+    videoId: 'M7lc1UVf-VE',
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      modestbranding: 0,
+      rel: 0,
+      autoplay:0,
+      showinfo:0
+    },
+    events: {
+      'onReady': onPlayerReady,
+      // 'onStateChange': onPlayerStateChange
+    },
+  });
+}
+
+function onPlayerReady(){
+  var duration = player.getDuration();
+  var interval;
+  clearInterval(interval);
+  interval = setInterval( function(){
+    var completed = getCurrentTime();
+    changButtonPosition(percent);
+  }, 1000);
+}
+
+$('.player__start').on('click', function(e){
+  e.preventDefault();
+  var playerStatus =player.getPlayerState();
+  
+  if(playerStatus !== 1){
+    player.playVideo();
+    $('.player__start').addClass('paused');
+  }
+    else{
+      player.pauseVideo();
+    $('.player__start').removeClass('paused');
+    }
+})
+
+$('.player__playback').on('click', function(){
+  var bar =$(e.currentTarget);
+  var newButtonPosition = e.pageX - bar.offset().left;
+  var clickedPercent = (newButtonPosition / bar.width()) * 100;
+  var newPlayerTime = (player.getDuration() / 100) * clickedPercent;
+
+  changButtonPosition(clickedPercent);
+  player.seekTo(newPlayerTime);
+})
+
+$('.player__splash').on('click', function(){
+  
+})
+
+function changButtonPosition(percent){
+  var percent = (completed / duration) * 100 + '%';
+  $('.player__playback-button').css({
+    left: percent
+  })
+}
