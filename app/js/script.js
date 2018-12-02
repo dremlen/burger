@@ -387,19 +387,49 @@ function onYouTubePlayerAPIReady() {
     },
     events: {
       'onReady': onPlayerReady,
-      // 'onStateChange': onPlayerStateChange
+       'onStateChange': onPlayerStateChange
     },
   });
+}
+
+function onPlayerStateChange(event){
+  switch(event.data){
+    case 1:
+      $('.player__start').addClass('paused');
+      $('.player__wrapper').addClass('active');
+    break;
+    case 2:
+      $('.player__start').removeClass('paused');
+    break;
+  }
 }
 
 function onPlayerReady(){
   var duration = player.getDuration();
   var interval;
+  updateTimer()
   clearInterval(interval);
   interval = setInterval( function(){
-    var completed = getCurrentTime();
+    var completed = player.getCurrentTime();
+    var percent = (completed / duration) * 100 + '%';
     changButtonPosition(percent);
+    updateTimer()
   }, 1000);
+}
+
+function updateTimer(){
+  $('.player__duration-completed').text(formatTime(player.getCurrentTime()));
+  $('.player__duratiom-estimate').text(formatTime(player.getDuration()));
+}
+
+function formatTime(time){
+  var roundTime = Math.round(time);
+
+  var minutes = Math.floor(roundTime / 60);
+  var seconds= roundTime - minutes * 60;
+  var formatedSeconds = seconds < 10 ? '0${seconds}' : seconds;
+
+  return minutes + ":" + formatedSeconds;
 }
 
 $('.player__start').on('click', function(e){
@@ -408,11 +438,9 @@ $('.player__start').on('click', function(e){
   
   if(playerStatus !== 1){
     player.playVideo();
-    $('.player__start').addClass('paused');
   }
     else{
       player.pauseVideo();
-    $('.player__start').removeClass('paused');
     }
 })
 
@@ -427,7 +455,7 @@ $('.player__playback').on('click', function(){
 })
 
 $('.player__splash').on('click', function(){
-  
+  player.playVideo();
 })
 
 function changButtonPosition(percent){
