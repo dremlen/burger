@@ -396,7 +396,7 @@ function onPlayerStateChange(event){
   switch(event.data){
     case 1:
       $('.player__start').addClass('paused');
-      $('.player__wrapper').addClass('active');
+      $('.player__wrapper').addClass('player__wrapper--active');
     break;
     case 2:
       $('.player__start').removeClass('paused');
